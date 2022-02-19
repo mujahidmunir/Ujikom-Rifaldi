@@ -50,9 +50,7 @@ class JsonController extends Controller
         }
     }
 
-    public function asdf(){
-        return view ('home');
-    }
+
 
     static function detailCart(){
         return Cart::whereTableId(Auth::user()->id);
