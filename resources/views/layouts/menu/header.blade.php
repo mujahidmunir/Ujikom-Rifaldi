@@ -9,19 +9,21 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
                 <span class="ion-android-menu"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <div class="navbar-collapse justify-content-end collapse show" id="navbarSupportedContent" style="">
+                <ul class="navbar-nav">
+                    <li class="dropdown">
+                        <a href="{{route('logout')}}" class="nav-link fa fa-sign-out" onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">Log Out
+                        </a>
 
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </li>
+
+                </ul>
             </div>
             <ul class="navbar-nav attr-nav align-items-center">
-                <li><a href="javascript:void(0);" class="nav-link search_trigger"><i class="linearicons-magnifier"></i></a>
-                    <div class="search_wrap">
-                        <span class="close-search"><i class="ion-ios-close-empty"></i></span>
-                        <form>
-                            <input type="text" placeholder="Search" class="form-control" id="search_input">
-                            <button type="submit" class="search_icon"><i class="ion-ios-search-strong"></i></button>
-                        </form>
-                    </div><div class="search_overlay"></div>
-                </li>
                 <li><a class="nav-link cart_trigger" href="javascript:void(0);"><i class="linearicons-cart"></i><span class="cart_count">0</span></a>
                     <div class="cart_box">
                         <div class="cart_header">
@@ -31,12 +33,14 @@
 
 
                         </ul>
+
                         <div class="cart_footer">
                             <p class="cart_total"><strong>Total:</strong> Rp <span class="price_symbole total">0</span></p>
                             <p class="cart_buttons"><a href="#" class="btn btn-default btn-radius checkout">Checkout</a></p>
                         </div>
                     </div>
                 </li>
+
             </ul>
         </nav>
     </div>
