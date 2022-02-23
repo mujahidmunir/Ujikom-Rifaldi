@@ -7,9 +7,9 @@
     <meta name="description" content="viho admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, viho admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
-    <link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
-    <title>viho - Premium Admin Template</title>
+    <link rel="icon" href="{{asset('images/logo/head.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('images/logo/head.png')}}" type="image/x-icon">
+    <title>Caffe Coffee</title>
 
 
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/flag-icon.css')}}">

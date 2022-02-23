@@ -24,7 +24,13 @@
                                     {{$role->name}}
                                 @endforeach
                             </td>
-                            <td class="text-center"><span class="badge badge-primary">active</span></td>
+                            <td class="text-center">
+                                @if($data->id = 1)
+                                <span class="badge badge-primary">Active</span>
+                                @else
+                                    <span class="badge badge-danger">Non Active</span>
+                                @endif
+                            </td>
 
                         </tr>
                         @endforeach

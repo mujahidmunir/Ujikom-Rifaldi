@@ -24,6 +24,9 @@
     @include('layouts.component.sidebar.sidebar-manager')
         @endrole
         @role('kasir')
+    @include('layouts.component.sidebar.sidebar-user')
+        @endrole
+        @role('chef')
     @include('layouts.component.sidebar.sidebar')
         @endrole
 

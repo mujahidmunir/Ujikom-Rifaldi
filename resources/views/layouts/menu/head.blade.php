@@ -8,9 +8,9 @@
     <meta name="keywords" content="	asian food, Fast Food, cafe, bar, bbq, restaurant, sushi, steakhouse, pizza, Mexican Food, menu, meat, Breakfast, Lunch, Dinner, Delicious, Tasty, Snack, Wine, Cola, html, template, css, Restaurant Web Templates.">
 
     <!-- SITE TITLE -->
-    <title>Tashan Restaurant and Cafe HTML5 Template</title>
+    <title>Caffe Coffee</title>
     <!-- Favicon Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('menu/assets/images/favicon.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/logo/head.png')}}">
     <!-- Animation CSS -->
     <link rel="stylesheet" href="{{asset('menu/assets/css/animate.css')}}">
     <!-- Latest Bootstrap min CSS -->

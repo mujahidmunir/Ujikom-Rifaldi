@@ -5,7 +5,7 @@
                         src="{{URL::to('images/logo/coffe-logo.png')}}" style="width:75%;" alt=""></a>
             </div>
             <div class="dark-logo-wrapper"><a href="{{URL::to('user/dashboard')}}">
-                    <img class="img-fluid" src="{{URL::to('images/logo/coffe-logo.png')}}" alt=""></a>
+                    <img class="img-fluid" src="{{URL::to('images/logo/coffe-logo.png')}}" style="width:75%;" alt=""></a>
             </div>
         </div>
         <div class="left-menu-header col ">
