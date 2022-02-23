@@ -9,7 +9,7 @@
                         <div class="table-responsive">
                             <table class="display table table-striped" id="manager">
                                 <thead>
-                                <tr>
+                                <tr >
                                     <th width="3%">No</th>
                                     <th>Name Table</th>
                                     <th>Status</th>
@@ -17,7 +17,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                               <tr>
+                               <tr id="ujicoba">
                                    <td>1</td>
                                    <td>Meja 1</td>
                                    <td>
@@ -25,7 +25,7 @@
                                        <span class="badge badge-warning" id="process">Process</span>
                                    </td>
                                    <td class="text-center">
-                                       <a href="" class="btn btn-danger btn-sm" id="trash"><i class="fa fa-trash"></i></a href="">
+                                       <button class="btn btn-danger btn-sm" id="trash" onclick="return confirm('Deletet Order?')"><i class="fa fa-trash"></i></button >
                                        <button class="btn btn-primary btn-sm" id="check"><i class="fa fa-check"></i></button>
                                    </td>
                                </tr>
@@ -73,7 +73,7 @@
                             </table>
                             <div class="mb-3 mt-3">
                                 <strong>Subtotal</strong>
-                                <strong class="float-end">Rp. 150.000,-</strong>
+                                <strong class="float-end">Rp. 300.000,-</strong>
                             </div>
                             <div class="card-footer">
                                 <button class="btn btn-primary float-end" id="chekOut">Chek-Out</button>
@@ -102,6 +102,9 @@
             $('#waiting').hide()
             $('#process').show()
             $('#trash').hide()
+        })
+        $('#trash').click(function () {
+            $('#ujicoba').hide()
         })
     </script>
 @endpush

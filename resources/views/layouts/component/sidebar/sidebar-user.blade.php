@@ -17,18 +17,11 @@
                             <h6>General </h6>
                         </div>
                     </li>
-                    <li class="dropdown"><a class="nav-link mb-2" href=""><i data-feather="home"></i><span>Dashboard</span></a>
+                    <li class="dropdown"><a class="nav-link mb-2" href="{{url('admin/dashboard')}}"><i data-feather="home"></i><span>Dashboard</span></a>
 
                     </li>
-                    <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="calendar"></i><span>Journey</span></a>
-                        <ul class="nav-submenu menu-content">
-                            <li><a href="">Create Jurney</a></li>
-                            <li><a href="">List Jurney</a></li>
-                        </ul>
+                    <li class="dropdown"><a class="nav-link " href="{{url('admin/history')}}"><i data-feather="pie-chart"></i><span>History Transaction</span></a>
                     </li>
-                    <li class="dropdown"><a class="nav-link " href=""><i data-feather="list"></i><span>Categorry</span></a>
-                    </li>
-
 
                 </ul>
             </div>
