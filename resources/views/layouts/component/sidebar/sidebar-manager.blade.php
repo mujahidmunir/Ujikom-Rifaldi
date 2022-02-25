@@ -17,7 +17,7 @@
                             <h6>General </h6>
                         </div>
                     </li>
-                    <li class="dropdown"><a class="nav-link mb-2" href=""><i
+                    <li class="dropdown"><a class="nav-link mb-2" href="{{url('manager/dashboard')}}"><i
                                 data-feather="home"></i><span>Dashboard</span></a>
 
                     </li>

@@ -5,7 +5,7 @@
             <div class="col-sm-12">
                 <div class="card radius-25">
                     <div class="card-body">
-                        <h4 class="mb-5">Order</h4>
+                        <h4 class="mb-5">Orders</h4>
                         <div class="table-responsive">
                             <table class="display table table-striped" id="manager">
                                 <thead>
