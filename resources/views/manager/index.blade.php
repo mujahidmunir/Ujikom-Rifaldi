@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 <div class="row container mt-2">
-    <div class="col-sm-4 ">
+    <div class="col-xl-4 ">
         <div class="card" style="border-radius: 20px">
             <div class="card-body">
                <div class="row">
@@ -11,7 +11,7 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-4 ">
+    <div class="col-xl-4 ">
         <div class="card" style="border-radius: 20px">
             <div class="card-body">
                <div class="row">
@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-4 ">
+    <div class="col-xl-4 ">
         <div class="card" style="border-radius: 20px">
             <div class="card-body">
                <div class="row">
