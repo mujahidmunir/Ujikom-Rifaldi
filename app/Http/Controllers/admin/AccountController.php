@@ -112,7 +112,7 @@ class AccountController extends Controller
         $user->status     = $request->input('status');
         $user->phone     = $request->input('phone');
         $user->save();
-        return redirect()->route('admin.account.index');
+        return redirect()->route('admin.account.index')->withSuccess('Berhasil');
 
     }
 }

@@ -33,7 +33,7 @@ class JsonController extends Controller
             $menu = Menu::whereId($request->input('id'))->first();
             $subtotal = $request->input('qty') * $menu->price;
             Cart::create([
-                'table_id' => Auth::user()->id,
+                    'table_id' => Auth::user()->id,
                 'menu_id' => $request->input('id'),
                 'qty' => $request->input('qty'),
                 'subtotal' => $subtotal

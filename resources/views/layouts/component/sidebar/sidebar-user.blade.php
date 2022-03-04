@@ -17,10 +17,10 @@
                             <h6>General </h6>
                         </div>
                     </li>
-                    <li class="dropdown"><a class="nav-link mb-2" href="{{url('admin/dashboard')}}"><i data-feather="home"></i><span>Dashboard</span></a>
+                    <li class="dropdown"><a class="nav-link mb-2" href="{{url('kasir/dashboard')}}"><i data-feather="home"></i><span>Dashboard</span></a>
 
                     </li>
-                    <li class="dropdown"><a class="nav-link " href="{{url('admin/history')}}"><i data-feather="pie-chart"></i><span>History Transaction</span></a>
+                    <li class="dropdown"><a class="nav-link " href="{{url('kasir/history')}}"><i data-feather="pie-chart"></i><span>History Transaction</span></a>
                     </li>
 
                 </ul>

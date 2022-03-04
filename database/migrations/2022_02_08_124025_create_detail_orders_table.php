@@ -18,6 +18,7 @@ class CreateDetailOrdersTable extends Migration
             $table->integer('order_id');
             $table->integer('menu_id');
             $table->integer('qty');
+            $table->integer('table_id');
             $table->integer('chef_id');
             $table->integer('status')->default(0);
             $table->timestamps();
