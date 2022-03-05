@@ -17,13 +17,12 @@
                             <h6>General </h6>
                         </div>
                     </li>
-                    <li class="dropdown"><a class="nav-link mb-2" href=""><i data-feather="home"></i><span>Dashboard</span></a>
+                    <li class="dropdown"><a class="nav-link mb-2" href="{{url('chef/dashboard')}}"><i data-feather="home"></i><span>Chef</span></a>
 
                     </li>
-                    <li class="dropdown"><a class="nav-link " href="{{url('chef/history')}}"><i data-feather="pie-chart"></i><span>History Orders</span></a>
+                    <li class="dropdown"><a class="nav-link " href="{{url('chef/waiters')}}"><i data-feather="pie-chart"></i><span>Waiter</span></a>
                     </li>
-                    <li class="dropdown"><a class="nav-link " href=""><i data-feather="list"></i><span>Categorry</span></a>
-                    </li>
+
 
 
                 </ul>
