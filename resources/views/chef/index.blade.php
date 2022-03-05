@@ -113,7 +113,7 @@
                 <h5 class="modal-title">Modal title</h5>
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{url('chef/delivery')}}" method="POST">
+            <form action="{{url('chef/approve')}}" method="POST">
                 @csrf
 
             <div class="modal-body">
