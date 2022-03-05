@@ -43,14 +43,7 @@
                 </div>
                 <div class="table-responsive">
                     <table class="display table table-striped" style="overflow: auto">
-                        <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th width="15%" class="text-center">Qty</th>
-                            <th width="15%" class="text-center">No Meja</th>
-                            <th width="15%" class="text-center">Status</th>
-                        </tr>
-                        </thead>
+
                         <tbody>
                         @foreach($minuman as $data)
                             <tr>
