@@ -14,7 +14,7 @@ class Cart extends Model
         return $this->belongsTo(Menu::class);
     }
     public function meja(){
-        return $this->belongsTo(Table::class, 'table_id', 'id');
+        return $this->belongsTo(User::class, 'table_id', 'id');
     }
 
 }

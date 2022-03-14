@@ -51,7 +51,8 @@
     <script>
         $('#manager').dataTable();
     </script>
-
 @endpush
+
+
 
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AccountController extends Controller
 {
@@ -18,7 +19,6 @@ class AccountController extends Controller
     {
 //        return Order::with('user')->get();
         $user = User::with('roles')->get();
-//        return $user;
         if (\request()->ajax()){
             $user = User::with('roles')->get();
             return response()->json($user);
@@ -57,7 +57,15 @@ class AccountController extends Controller
      */
     public function store(Request $request)
     {
-        return $this->save($request);
+        $user = User::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
+            'password' => Hash::make('123')
+        ]);
+
+        $user->assignRole($request->input('role'));
+        return back();
     }
 
     /**

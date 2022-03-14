@@ -4,7 +4,7 @@
         <div class="card-header">
             <h4>Account</h4>
         </div>
-        <form action="{{$url}}" method="post">
+        <form action="{{$url}}" method="post" enctype="multipart/form-data">
             @csrf
             @isset($menu)
                 @method('PUT')

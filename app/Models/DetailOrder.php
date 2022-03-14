@@ -18,4 +18,8 @@ class DetailOrder extends Model
         return $this->belongsTo(Menu::class);
     }
 
+    public function table(){
+        return $this->belongsTo(User::class, 'table_id', 'id');
+    }
+
 }

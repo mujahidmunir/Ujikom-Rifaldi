@@ -31,8 +31,7 @@
                     <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i
                                 data-feather="calendar"></i><span>Manage</span></a>
                         <ul class="nav-submenu menu-content">
-                            <li><a href="">Transaction</a></li>
-                            <li><a href="">Report</a></li>
+                            <li><a href="{{url('/manager/report')}}">Report</a></li>
                         </ul>
                     </li>
 

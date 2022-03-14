@@ -24,11 +24,11 @@
                 </div>
                 <div class="mt-2">
                     <label class="form-label" for="validationCustomUsername">Category</label>
-                    <select class="js-example-basic-single col-sm-12" name="status">
+                    <select class="js-example-basic-single col-sm-12" name="role">
                         <optgroup label="Developer">
                             <option hidden>---Select---</option>
                             @foreach($role as $data)
-                                <option>{{$data->name}}</option>
+                                <option value="{{$data->name}}">{{$data->name}}</option>
                             @endforeach
                         </optgroup>
                     </select>

@@ -8,6 +8,7 @@ use App\Models\Cart;
 use App\Models\DetailOrder;
 use App\Models\Order;
 use App\Models\Table;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,11 +19,11 @@ class DashboardController extends Controller
         if (\request()->ajax()){
             $cart = Cart::whereTableId($id)->with('menu')->get();
             $total = Cart::whereTableId($id)->sum('subtotal');
-            $tableName = Table::whereId($id)->first();
+            $tableName = User::whereId($id)->first();
             return response()->json([$cart, $total, $tableName]);
         }
 
-        $cart = Cart::with('meja')->groupBy('table_id')->orderBy('table_id', 'asc')
+        $cart = Cart::with('meja')->groupBy('table_id')->orderBy('id', 'asc')
             ->get();
 //        return $cart;
         return view('kasir.index', compact('cart'));

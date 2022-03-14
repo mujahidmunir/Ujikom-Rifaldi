@@ -18,22 +18,27 @@
                         </tr>
                         </thead>
                         <tbody>
+
                         @foreach($user as $key => $data)
+                            @foreach($data->roles as $role)
+                            @if($data->roles == !null)
                         <tr>
                             <td>{{$key+1}}</td>
                             <td>{{$data->name}}</td>
                             <td>{{$data->email}}</td>
                             <td>{{$data->phone}}</td>
                             <td class="text-center">
-                                @foreach($data->roles as $role)
+
                                     {{$role->name}}
-                                @endforeach
+
                             </td>
                             <td class="text-center">
                                 <a href="{{route('admin.account.edit', $data->id)}}" class="btn btn-sm btn-warning"><i class="fa fa-edit pe-1"></i></a>
                                 <a href="" class="btn btn-sm btn-danger"><i class="fa fa-trash pe-1"></i></a>
                             </td>
                         </tr>
+                            @endif
+                        @endforeach
                         @endforeach
                         </tbody>
 

@@ -117,7 +117,14 @@ class MenuController extends Controller
         $menu->category_id = $request->input('category_id');
         $menu->price       = $request->input('price');
         $menu->description = $request->input('description');
-        $menu->image       = $request->input('image');
+        if ($request->file('image')){
+            $file = $request->file('image');
+            $file_name = md5(now()).'.'.$file->getClientOriginalExtension();
+            $file->move('images/products',$file_name);
+            $menu->image = $file_name;
+        } else {
+            return 'tidak ada image';
+        }
         $menu->save();
         return redirect()->route('manager.menu.index');
 

@@ -29,13 +29,13 @@ class DashboardController extends Controller
     static function query($cat){
             return DetailOrder::where('detail_orders.status',0)
                 ->join('menus', 'menu_id' , 'menus.id')
-                ->join('tables', 'detail_orders.table_id' , 'tables.id')
+                ->join('users', 'detail_orders.table_id' , 'users.id')
                 ->select(
                     'menus.name',
-                    'tables.name as table_name',
+                    'users.name as table_name',
                     'detail_orders.id',
                     'detail_orders.status',
-                    'tables.id as table_id',
+                    'users.id as table_id',
                     'menus.id as menu_id'
                 )
                 ->where('menus.category_id', $cat)
@@ -48,18 +48,19 @@ class DashboardController extends Controller
     public function waiters($id = null){
         $data ['orders'] = DetailOrder::whereNotIn('detail_orders.status', [0,3])
             ->join('menus', 'menu_id' , 'menus.id')
-            ->join('tables', 'detail_orders.table_id' , 'tables.id')
+            ->join('users', 'detail_orders.table_id' , 'users.id')
             ->select(
                 'menus.name',
-                'tables.name as table_name',
+                'users.name as table_name',
                 'detail_orders.id',
                 'detail_orders.status',
-                'tables.id as table_id',
+                'users.id as table_id',
                 'menus.id as menu_id'
             )
 
             ->groupBy('table_name', 'menu_id', 'order_id')
             ->selectRaw("SUM(qty) as total_qty")
+            ->orderBy('detail_orders.updated_at', 'ASC')
             ->get();
         return view('chef.waiters', $data);
     }
@@ -94,16 +95,14 @@ class DashboardController extends Controller
             'status' => 3,
             'waiter_id' => $waiter_id
         ]);
-        $count_order = $order_id->count();
+
+        $count_order = DetailOrder::whereTableId($table_id)->whereWaiterId(null)->count();
         if ($count_order == 0){
             Order::whereId($id)->update([
                 'status' => '1'
             ]);
         }
-
-
         return back()->withToastSuccess('berhasil');
     }
-
 
 }

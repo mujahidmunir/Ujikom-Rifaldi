@@ -23,9 +23,14 @@
                     </li>
 
                     <li class="dropdown"><a class="nav-link mb-2" href="{{route('admin.account.index')}}"><i
-                                data-feather="home"></i><span>Account</span></a>
-
+                                data-feather="home"></i><span>User Account</span></a>
                     </li>
+
+                    <li class="dropdown"><a class="nav-link mb-2" href="{{route('admin.tables')}}"><i
+                                data-feather="home"></i><span>Tables</span></a>
+                    </li>
+
+
 
 
                 </ul>
