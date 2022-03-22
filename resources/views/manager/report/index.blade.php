@@ -25,14 +25,21 @@
                 </div>
             </div>
             <div class="card-footer">
-                <div class="float-end mb-4">
-                    <button type="button" id="reset" class="btn btn-sm  btn-danger"><i class="fa fa-times"></i>&nbsp; Reset</button>
-                    <button type="submit" class="btn btn-sm  btn-success"><i class="fa fa-search"></i>&nbsp; Search</button>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4 id="totalIncome">Total Pendapatan Rp. 0 </h4>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="float-end mb-4">
+                            <button type="button" id="reset" class="btn btn-sm  btn-danger"><i class="fa fa-times"></i>&nbsp; Reset</button>
+                            <button type="submit" class="btn btn-sm  btn-success"><i class="fa fa-search"></i>&nbsp; Search</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             </form>
         </div>
-        <h3 id="totalIncome"> </h3>
+
         <div class="card">
             <div class="card-head">
                <div class="row">
@@ -115,7 +122,7 @@
                         ]);
                     });
                     $('#history').DataTable({data:res});
-                    $('#totalIncome').html('Total Pendapatan Rp  ' + data[1])
+                    $('#totalIncome').html('Total Pendapatan Rp.  ' + data[1])
                 },
                 error: function(data){
                     alert("Error")
