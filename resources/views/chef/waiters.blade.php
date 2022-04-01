@@ -53,7 +53,6 @@
         function Select(id,tableId, menuId) {
             document.getElementById("tableId").value = tableId;
             document.getElementById("menuId").value = menuId;
-
             $.get("{{url('chef/dashboard')}}/"+id, function (data) {
                 $('#SelectEmployee').html('')
                 $('#SelectEmployee').html('<option value="">Select Name</option>')
@@ -61,10 +60,7 @@
                 data.map(function (v) {
                     $('#SelectEmployee').append('<option value="'+v.id+'">'+v.name+'</option>')
                 })
-
             })
-
-
         }
     </script>
 
@@ -94,4 +90,3 @@
         </div>
     </div>
 </div>
-

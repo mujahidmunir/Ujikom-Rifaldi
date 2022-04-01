@@ -32,7 +32,9 @@
                                 data-feather="calendar"></i><span>Manage</span></a>
                         <ul class="nav-submenu menu-content">
                             <li><a href="{{url('/manager/report')}}">Report</a></li>
+                            <li><a href="{{url('/manager/log-activity')}}">Log Activity</a></li>
                         </ul>
+
                     </li>
 
                 </ul>

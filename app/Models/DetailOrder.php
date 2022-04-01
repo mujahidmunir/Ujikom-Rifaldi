@@ -11,7 +11,11 @@ class DetailOrder extends Model
     protected $guarded =[];
 
     public function chef(){
-        return $this->belongsTo(User::class, 'chef_id', 'id');
+        return $this->belongsTo(Employee::class, 'chef_id', 'id');
+    }
+
+    public function waiter(){
+        return $this->belongsTo(Employee::class, 'waiter_id', 'id');
     }
 
     public function menu(){
@@ -21,5 +25,7 @@ class DetailOrder extends Model
     public function table(){
         return $this->belongsTo(User::class, 'table_id', 'id');
     }
+
+
 
 }

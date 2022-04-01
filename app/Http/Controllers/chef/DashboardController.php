@@ -27,22 +27,22 @@ class DashboardController extends Controller
     }
 
     static function query($cat){
-            return DetailOrder::where('detail_orders.status',0)
-                ->join('menus', 'menu_id' , 'menus.id')
-                ->join('users', 'detail_orders.table_id' , 'users.id')
-                ->select(
-                    'menus.name',
-                    'users.name as table_name',
-                    'detail_orders.id',
-                    'detail_orders.status',
-                    'users.id as table_id',
-                    'menus.id as menu_id'
-                )
-                ->where('menus.category_id', $cat)
+        return DetailOrder::where('detail_orders.status',0)
+            ->join('menus', 'menu_id' , 'menus.id')
+            ->join('users', 'detail_orders.table_id' , 'users.id')
+            ->select(
+                'menus.name',
+                'users.name as table_name',
+                'detail_orders.id',
+                'detail_orders.status',
+                'users.id as table_id',
+                'menus.id as menu_id'
+            )
+            ->where('menus.category_id', $cat)
 
-                ->groupBy('table_name', 'menu_id', 'order_id')
-                ->selectRaw("SUM(qty) as total_qty")
-                ->get();
+            ->groupBy('table_name', 'menu_id', 'order_id')
+            ->selectRaw("SUM(qty) as total_qty")
+            ->get();
     }
 
     public function waiters($id = null){
@@ -74,8 +74,8 @@ class DashboardController extends Controller
                 'status' => 2
             ]);
         DetailOrder::whereMenuId($menu_id)->whereTableId($table_id)->whereStatus(0)->update([
-           'status' => 1,
-           'chef_id' => $chef_id
+            'status' => 1,
+            'chef_id' => $chef_id
         ]);
 
         return back()->withToastSuccess('berhasil');
