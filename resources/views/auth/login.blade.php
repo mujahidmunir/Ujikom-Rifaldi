@@ -45,7 +45,10 @@
                         <div class="form-group">
                             <label>Email Address</label>
                             <div class="input-group">
-                                <input class="form-control" name="email" type="text" required="" placeholder=""style="border-radius: 13px;">
+                                <input class="form-control @error('email') is-invalid @enderror"  name="email" type="text" required="" placeholder=""style="border-radius: 13px;">
+                                @error('email')
+                                <span class="text-danger">{{$massage}}</span>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group">
@@ -84,6 +87,8 @@
 <!-- Plugins JS Ends-->
 <!-- Theme js-->
 <script src="{{asset('assets/js/script.js')}}"></script>
+
+@include('sweetalert::alert')
 <!-- login js-->
 <!-- Plugin used-->
 </body>
